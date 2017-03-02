@@ -46,7 +46,7 @@ class MwsOrderClientPack extends MwsOrderClient implements ThrottleAwareClientPa
     protected $sellerId;
 
     public function __construct(MwsClientPoolConfig $poolConfig) {
-        $this->marketplaceId    = $poolConfig->getMarketplaceId($poolConfig->getAmazonSite());
+        $this->marketplaceId    = $poolConfig->getMarketplaceId();
         $this->sellerId         = $poolConfig->getSellerId();
 
         $this->initThrottleManager();
